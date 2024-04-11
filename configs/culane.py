@@ -1,6 +1,6 @@
 # DATA
 dataset='CULane'
-data_root = r"C:\Users\sant4\Documents\CULanes"
+data_root = r"E:\Senior Year Project\CULane\CULane\CULane\train"
 
 # TRAIN
 epoch = 50
@@ -28,7 +28,7 @@ shp_loss_w = 0.0
 # EXP
 note = ''
 
-log_path = r"C:\Users\sant4\Documents\LogFiles"
+log_path = r"E:\Senior Year Project\LogPathCULane"
 
 # FINETUNE or RESUME MODEL PATH
 finetune = None

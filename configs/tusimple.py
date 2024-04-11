@@ -1,6 +1,6 @@
 # DATA
 dataset='Tusimple'
-data_root = r"C:\Users\sant4\Desktop\TUSimple\train_set"
+data_root = r"C:\Users\sant4\Desktop\TUSimple\test_set"
 
 # TRAIN
 epoch = 100
@@ -29,7 +29,7 @@ shp_loss_w = 0.0
 # EXP
 note = ''
 
-log_path = r"C:\Users\sant4\Desktop\LogPath"
+log_path = r"E:\Senior Year Project\TestRes"
 
 # FINETUNE or RESUME MODEL PATH
 finetune = None
