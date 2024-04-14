@@ -1,6 +1,6 @@
 # DATA
 dataset='CULane'
-data_root = r"E:\Senior Year Project\CULane\CULane\CULane\train"
+data_root = r"E:\Senior Year Project\CULane"
 
 # TRAIN
 epoch = 50
