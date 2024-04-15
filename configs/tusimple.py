@@ -36,7 +36,8 @@ finetune = None
 resume = None
 
 # TEST
-test_model = None
-test_work_dir = None
+test_model = r"E:\Senior Year Project\LogPathTUSimple\20240410_103141_lr_4e-04_b_32\ep099.pth"
+test_work_dir = log_path = r"E:\Senior Year Project\TestResTUSimple"
 
 num_lanes = 4
+cls_num_per_lane = num_lanes  # Directly use your existing 'num_lanes' variable

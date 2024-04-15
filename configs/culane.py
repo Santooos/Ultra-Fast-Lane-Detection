@@ -35,8 +35,8 @@ finetune = None
 resume = None
 
 # TEST
-test_model = None
-test_work_dir = None
+test_model = r"E:\Senior Year Project\LogPathCULane\20240410_225422_lr_1e-01_b_32\ep049.pth"
+test_work_dir = r"E:\Senior Year Project\TestCULane"
 
 num_lanes = 4
 
