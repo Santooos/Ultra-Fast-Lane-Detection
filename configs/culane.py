@@ -28,7 +28,7 @@ shp_loss_w = 0.0
 # EXP
 note = ''
 
-log_path = r"E:\Senior Year Project\LogPathCULane"
+log_path = r"E:\Senior Year Project\TestCULane"
 
 # FINETUNE or RESUME MODEL PATH
 finetune = None
