@@ -59,7 +59,7 @@ def main():
         with torch.no_grad():
             out = net(frame_tensor)
 
-        print(out.size())
+        #print(out.size())
 
         # Postprocess and visualize the result
         # This post-processing code is adapted from the provided script.
