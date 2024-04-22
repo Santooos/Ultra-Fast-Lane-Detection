@@ -1,5 +1,6 @@
 import torch
 import cv2
+import time
 import numpy as np
 import scipy.special
 import torchvision.transforms as transforms
@@ -41,8 +42,19 @@ def main():
         raise NotImplementedError("Dataset not supported: " + cfg.dataset)
 
 
+
+    start_time = time.time()
+    frame_count = 0
+
     # Set up video capture
     cap = cv2.VideoCapture(1)  # 0 for the default webcam
+    desired_width = 1280
+    desired_height = 720
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, desired_width)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, desired_height)
+
+
+    start_time = time.time()
 
     while cap.isOpened():
         ret, frame = cap.read()
@@ -60,6 +72,24 @@ def main():
             out = net(frame_tensor)
 
         #print(out.size())
+
+        # Update frame count
+        frame_count += 1
+
+        # Calculate elapsed time
+        elapsed_time = time.time() - start_time
+
+        # Calculate FPS
+        fps = frame_count / elapsed_time
+
+        # Display FPS on the frame 
+        cv2.putText(frame, "FPS: {:.2f}".format(fps), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 
+                    1, (0, 255, 0), 2, cv2.LINE_AA)
+
+        # Show the frame
+        cv2.imshow('Real-time Lane Detection', frame)
+        
+
 
         # Postprocess and visualize the result
         # This post-processing code is adapted from the provided script.
